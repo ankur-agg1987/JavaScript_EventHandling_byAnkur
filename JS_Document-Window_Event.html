@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Handling the Load Event</title>
+</head>
+<!--The load event occurs when a web page has finished loading in the web browser.-->
+<body onload="window.alert('Page is loaded successfully!');">
+    <h1>This is a heading</h1>
+    <p>This is paragraph of text.</p>
+	
+	<p id="result"></p>
+    <script>
+        function displayWindowSize(){
+            var w = window.outerWidth;
+            var h = window.outerHeight;
+            var txt = "Window size: width=" + w + ", height=" + h;
+            document.getElementById("result").innerHTML = txt;
+        }
+        window.onresize = displayWindowSize;
+    </script>
+    <p><strong>Note:</strong> Resize the browser window to see how the resize event works.</p>
+</body>
+</html>
